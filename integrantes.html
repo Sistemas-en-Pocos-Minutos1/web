@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrantes - Sistemas en Pocos Minutos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2em; 
+            margin-bottom: 20px;
+        }
+        nav {
+            background-color: #555;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            position: relative; /* Necesario para el menú desplegable */
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            background: #666;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, opacity 0.3s, transform 0.3s;
+        }
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #777;
+            opacity: 0.8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #666;
+            min-width: 160px;
+            z-index: 1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px; /* Bordes redondeados */
+            margin-top: 10px; /* Espacio entre el botón y el menú desplegable */
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 10px 60px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #777;
+        }
+        .show {
+            display: block; /* Mostrar el menú desplegable */
+        }
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .team {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .team-member {
+            margin: 20px 10px;
+            text-align: center;
+            max-width: 200px;
+            flex: 1 1 200px; /* Ajuste para mantener el tamaño en pantallas pequeñas */
+        }
+        .team-member img {
+            width: 100px; /* Tamaño ajustado */
+            height: 100px; /* Tamaño ajustado */
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .team-member h2 {
+            margin: 10px 0;
+            font-size: 1.2em;
+            text-align: justify; /* Justifica el texto del nombre del miembro */
+        }
+        .team-member p {
+            margin: 5px 0;
+            text-align: justify; /* Justifica el texto de los párrafos */
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        .contact-info {
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Integrantes</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Instituciones.html">Informacion Institucional</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+            <li><a href="https://sites.google.com/view/sistemas-en-pocos-minutos?usp=sharing">Página De Descargas</a></li>
+            <div class="dropdown">
+                <li><a href="javascript:void(0);" onclick="toggleDropdown()">Vídeos</a></li>
+                <div class="dropdown-content" id="videoDropdown">
+                    <a href="videos-mantenimieto de softwar.html">Vídeos - Mantenimiento de Software</a>
+                    <a href="mantenimineto-hardware.html">Vídeos - Mantenimiento de Hardware</a>
+                    <a href="videos-informativos.html">Videos Informativos sobre Sistemas</a>
+                    <a href="videos-descargas.html">Videos sobre Instalación de Programas</a>
+                </div>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <div class="team">
+            <div class="team-member">
+                <img src="imagenes/mienbro3.png" alt="Brayan Leonardo Jiménez Molina">
+                <h2>Brayan Leonardo Jiménez Molina</h2>
+                <p>Colegio: General Santander Cede Central</p>
+                <p>Jornada: Mañana</p>
+                <p>Curso: 11-01</p>
+                <p>Responsabilidad: Diseño y creación de video tutoriales</p>
+            </div>
+            <div class="team-member">
+                <img src="imagenes/mienbro2.png" alt="Ronal Alfonso Cordon Villasmil">
+                <h2>Ronal Alfonso Cordon Villasmil</h2>
+                <p>Colegio: General Santander Cede Central</p>
+                <p>Jornada: Mañana</p>
+                <p>Curso: 11-01</p>
+                <p>Responsabilidad: Diseño y creación de video tutoriales</p>
+            </div>
+            <div class="team-member">
+                <img src="imagenes/mienbro1.png" alt="Franyer Hernán Duarte Quintero">
+                <h2>Franyer Hernán Duarte Quintero</h2>
+                <p>Colegio: General Santander Cede Central</p>
+                <p>Jornada: Mañana</p>
+                <p>Curso: 11-01</p>
+                <p>Responsabilidad: Diseño y creación de video tutoriales</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Sistemas en Pocos Minutos. Todos los derechos reservados.</p>
+        <p class="contact-info">Dirección de contacto: proyectosenacolgesan@gmail.com</p>
+    </footer>
+    
+    <script>
+        function toggleDropdown() {
+            document.getElementById("videoDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown a')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

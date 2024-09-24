@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partes del Computador - Sistemas en Pocos Minutos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Evitar el desplazamiento horizontal */
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #555;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            position: relative; /* Necesario para el menú desplegable */
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            background: #666;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, opacity 0.3s, transform 0.3s;
+        }
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #777;
+            opacity: 0.8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #666;
+            min-width: 160px;
+            z-index: 1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px; /* Bordes redondeados */
+            margin-top: 10px; /* Espacio entre el botón y el menú desplegable */
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 10px 60px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {
+            background-color: #777;
+        }
+        .show {
+            display: block; /* Mostrar el menú desplegable */
+        }
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .intro-text {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .partes-lista {
+            list-style: none;
+            padding: 0;
+        }
+        .parte-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+            text-align: left;
+        }
+        .parte-item img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .parte-item h2 {
+            margin-top: 0;
+        }
+        .divider {
+            border-top: 2px solid #ddd;
+            margin: 40px 0;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        .contact-info {
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Partes del Computador</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Instituciones.html">Informacion Institucional</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+            <li><a href="https://sites.google.com/view/sistemas-en-pocos-minutos?usp=sharing">Página De Descargas</a></li>
+            <div class="dropdown">
+                <li><a href="javascript:void(0);" onclick="toggleDropdown()">Vídeos</a></li>
+                <div class="dropdown-content" id="videoDropdown">
+                    <a href="videos-mantenimieto de softwar.html">Vídeos - Mantenimiento de Software</a>
+                    <a href="mantenimineto-hardware.html">Vídeos - Mantenimiento de Hardware</a>
+                    <a href="videos-informativos.html">Videos Informativos sobre Sistemas</a>
+                    <a href="videos-descargas.html">Videos sobre Instalación de Programas</a>
+                </div>
+            </div>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="intro-text">
+            <p>En esta sección de la página veremos las partes que tiene un computador.</p>
+        </div>
+        <div class="divider"></div>
+        <ul class="partes-lista">
+            <li class="parte-item">
+                <img src="imagenes/imagenpantalla.png" alt="Pantalla o Monitor">
+                <div>
+                    <h2>Pantalla o Monitor</h2>
+                    <p>La pantalla o monitor es uno de los componentes principales de una computadora, ya que sirve como interfaz visual entre el usuario y el sistema. Existen diferentes tipos de monitores como CRT (de tubo de rayos catódicos), LCD (pantalla de cristal líquido), LED (diodo emisor de luz) y OLED (diodo orgánico emisor de luz), cada uno con ventajas particulares en cuanto a calidad de imagen, consumo de energía y tamaño.</p>
+                </div>
+            </li>
+            <li class="parte-item">
+                <img src="imagenes/imagenplaca.png" alt="Tarjeta Madre">
+                <div>
+                    <h2>Tarjeta Madre</h2>
+                    <p>La tarjeta madre, o motherboard, es el corazón de la computadora, ya que conecta y permite la comunicación entre todos los componentes. En ella se instalan el procesador (CPU), la memoria RAM, los dispositivos de almacenamiento y las tarjetas de expansión. La calidad y capacidad de una tarjeta madre influyen directamente en el rendimiento del sistema y su capacidad de expansión.</p>
+                </div>
+            </li>
+            <li class="parte-item">
+                <img src="imagenes/imagenprocesador.png" alt="Procesador">
+                <div>
+                    <h2>Procesador</h2>
+                    <p>El procesador, conocido como CPU (Unidad Central de Procesamiento), es el cerebro de la computadora. Se encarga de ejecutar las instrucciones y realizar las operaciones aritméticas, lógicas y de control que permiten el funcionamiento de los programas. Un procesador más rápido y con más núcleos puede realizar más tareas simultáneamente, mejorando el rendimiento en aplicaciones exigentes.</p>
+                </div>
+            </li>
+            <li class="parte-item">
+                <img src="imagenes/imagenram.png" alt="Memoria RAM">
+                <div>
+                    <h2>Memoria RAM</h2>
+                    <p>La memoria RAM (Memoria de Acceso Aleatorio) es un tipo de memoria volátil que se utiliza para almacenar datos de forma temporal mientras el sistema está en funcionamiento. A diferencia de los dispositivos de almacenamiento permanentes, como los discos duros o SSD, la RAM permite un acceso mucho más rápido a los datos, lo que facilita la ejecución rápida de programas y la multitarea. Cuanta más memoria RAM tenga un sistema, más datos podrá manejar simultáneamente sin reducir el rendimiento.</p>
+                </div>
+            </li>
+            <li class="parte-item">
+                <img src="imagenes/imagenssd.png" alt="Disco de Almacenamiento SSD">
+                <div>
+                    <h2>Disco de Almacenamiento SSD</h2>
+                    <p>Los discos de estado sólido (SSD) son dispositivos de almacenamiento que utilizan memoria flash para guardar datos. A diferencia de los discos duros tradicionales (HDD), los SSD no tienen partes móviles, lo que los hace más rápidos, silenciosos y resistentes a impactos. Su velocidad de lectura y escritura mejora notablemente el rendimiento general del sistema, reduciendo los tiempos de carga de programas y archivos.</p>
+                </div>
+            </li>
+            <li class="parte-item">
+                <img src="imagenes/imagenhdd.png" alt="Disco de Almacenamiento HDD">
+                <div>
+                    <h2>Disco de Almacenamiento HDD</h2>
+                    <p>El disco duro (HDD) es un dispositivo de almacenamiento magnético que utiliza platos giratorios para almacenar grandes cantidades de datos. Aunque son más lentos que los SSD, los HDD siguen siendo una opción popular debido a su mayor capacidad de almacenamiento a un menor costo. Los discos duros se utilizan comúnmente para almacenar grandes archivos como videos, fotos o copias de seguridad del sistema.</p>
+                </div>
+            </li>
+            <li class="parte-item">
+                <img src="imagenes/imagenfuente.png" alt="Fuente de Alimentación">
+                <div>
+                    <h2>Fuente de Alimentación</h2>
+                    <p>La fuente de alimentación es el componente encargado de suministrar energía eléctrica a todos los componentes de la computadora. Convierte la corriente alterna (AC) proveniente de la red eléctrica en corriente continua (DC) que los componentes pueden utilizar. La potencia de una fuente de alimentación, medida en vatios, debe ser suficiente para soportar el consumo de todos los componentes, especialmente en sistemas con tarjetas gráficas potentes o múltiples discos duros.</p>
+                </div>
+            </li>
+            <li class="parte-item">
+                <img src="imagenes/imagentargeta.png" alt="Tarjeta Gráfica">
+                <div>
+                    <h2>Tarjeta Gráfica</h2>
+                    <p>La tarjeta gráfica (GPU) es el componente responsable de procesar y generar imágenes que se muestran en la pantalla. Aunque las computadoras básicas pueden funcionar con gráficos integrados, las tarjetas gráficas dedicadas son esenciales para tareas como el diseño gráfico, la edición de video y los videojuegos. Las GPUs modernas también se utilizan en tareas de inteligencia artificial y aprendizaje automático, ya que pueden procesar grandes cantidades de datos en paralelo.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <footer>
+        <p>© 2024 Sistemas en Pocos Minutos. Todos los derechos reservados.</p>
+        <p class="contact-info">Contacto: proyectosenacolgesan@gmail.com</p>
+    </footer>
+ <script>
+        function toggleDropdown() {
+            document.getElementById("videoDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown a')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
+
+</body>
+</html>

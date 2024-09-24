@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticos - Sistemas en Pocos Minutos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #555;
+            padding: 10px 0;
+            display: none; /* Eliminar el menú de navegación */
+        }
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .video-container {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd; /* Línea divisora */
+            padding-bottom: 20px;
+        }
+        .video-container:last-child {
+            border-bottom: none; /* Quitar línea divisora en el último video */
+        }
+        .video-container iframe {
+            width: 320px; /* Tamaño reducido de los videos */
+            height: 180px;
+            margin-right: 20px;
+            border-radius: 8px; /* Bordes redondeados para los videos */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para los videos */
+        }
+        .video-description {
+            flex: 1;
+            font-size: 1em;
+            color: #555;
+            line-height: 1.5;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #333;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #555;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info {
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Prácticos - Sistemas en Pocos Minutos</h1>
+    </header>
+    <div class="content">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/FOzKZs5H3Vs" title="Video 1"></iframe>
+            <div class="video-description">
+                <p>En este video se enseñará cómo hacerle mantenimiento a un computador portátil.</p>
+            </div>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/yUjvSX3Y6r8" title="Video 2"></iframe>
+            <div class="video-description">
+                <p>En este video se enseñará cómo hacerle mantenimiento a un computador de mesa.</p>
+            </div>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/JdZtyhP4fEI" title="Video 3"></iframe>
+            <div class="video-description">
+                <p>En este video se enseñará cómo revisar los ciclos de carga de los computadores Lenovo como método de mantenimiento preventivo.</p>
+            </div>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/jJfOFWmj8R4" title="Video 4"></iframe>
+            <div class="video-description">
+                <p>En este video se enseñará cómo eliminar los archivos temporales de la computadora como método de mantenimiento preventivo.</p>
+            </div>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/lbu1Ts8fCJo" title="Video 5"></iframe>
+            <div class="video-description">
+                <p>En este video se enseñará cómo revisar las horas de uso de un disco de almacenamiento como método de mantenimiento preventivo.</p>
+            </div>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/mI83pQCCNo8" title="Video 6"></iframe>
+            <div class="video-description">
+                <p>En este video se enseñará cómo instalar un antivirus para un computador, más específicamente el antivirus Avast.</p>
+            </div>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/VfQzTtsQyKI" title="Video 7"></iframe>
+            <div class="video-description">
+                <p>En este video se enseñará cómo desinstalar un programa en un computador desde el panel de control del equipo.</p>
+            </div>
+        </div>
+        <a href="blog.html" class="back-button">Regreso al Blog</a>
+    </div>
+    <footer>
+        <p>&copy; 2024 Sistemas en Pocos Minutos. Todos los derechos reservados.</p>
+        <p class="contact-info">Dirección de contacto: proyectosenacolgesan@gmail.com</p>
+    </footer>
+</body>
+</html>

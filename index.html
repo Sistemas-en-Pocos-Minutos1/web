@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas en Pocos Minutos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/aos.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: url('imagenes/imagendeiniconprincipal.png') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            height: 110px; /* Ajusta la altura del header según sea necesario */
+        }
+        header h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin: 0;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        header h2 {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5em;
+            padding: 8px 16px;
+            border-radius: 8px;
+            margin: 0;
+            animation: fadeIn 1.5s ease-in-out;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        nav {
+            background-color: #3a3a3a;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: -webkit-sticky; /* Para navegadores WebKit */
+            position: sticky; /* Para otros navegadores */
+            top: 0; /* Posición fija en la parte superior */
+            z-index: 1000; /* Asegura que esté sobre otros elementos */
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 10px; /* Espacio entre los botones */
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: block;
+            background: #666;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, opacity 0.3s, transform 0.3s;
+            text-align: center;
+            width: 120px; /* Tamaño uniforme */
+        }
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #777;
+            opacity: 0.8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #3a3a3a;
+            min-width: 260x;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+            padding: 10px 0; /* Espaciado interno */
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 12px 62px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            transition: background-color 0.3s;
+        }
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+        .show {
+            display: block; /* Muestra el menú al hacer clic */
+        }
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .welcome-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .welcome-section img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .welcome-text {
+            max-width: 800px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .welcome-text h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .welcome-text p {
+            line-height: 1.6;
+        }
+        .importance-section {
+            margin-top: 40px;
+        }
+        .importance-section h2 {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .importance-section p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .divider {
+            border-top: 2px solid #ddd;
+            margin: 40px 0;
+        }
+        .video-section {
+            text-align: center;
+        }
+        .video-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .video-container iframe {
+            width: 320px;
+            height: 180px;
+            border-radius: 8px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        .contact-info {
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Estilo para la sección de mantenimiento */
+        .importance-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .importance-item {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 100%; /* Se ajusta al contenedor */
+            max-width: 500px; /* Máximo ancho */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .importance-item img {
+            width: 100%; /* Asegura que la imagen tome todo el ancho */
+            height: auto;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        .importance-text {
+            max-width: 100%;
+        }
+
+        .importance-text h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        /* Estilo para el texto debajo de los videos */
+        .video-description {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sistemas en Pocos Minutos</h1>
+        <h2 id="username-display"></h2> <!-- Aquí se mostrará el nombre del usuario -->
+    </header>
+    <nav>
+        <ul>
+            <li><a href="Instituciones.html">Informacion Institucional</a></li>
+            <li><a href="partes.html">Partes del Computador</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+            <li><a href="https://sites.google.com/view/sistemas-en-pocos-minutos?usp=sharing">Página De Descargas</a></li>
+            <div class="dropdown">
+                <li><a href="javascript:void(0);" onclick="toggleDropdown()">Videos</a></li>
+                <div class="dropdown-content" id="videoDropdown">
+                    <a href="videos-mantenimieto de softwar.html">videos mantenimieto de Software</a>  <a href="videos-mantenimieto de softwar.html">Vídeos - Mantenimiento de Software</a>
+                    <a href="mantenimineto-hardware.html">Vídeos - Mantenimiento de Hardware</a>
+                    <a href="videos-informativos.html">Videos Informativos sobre Sistemas</a>
+                    <a href="videos-descargas.html">Videos sobre Instalación de Programas</a>
+                </div>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <!-- Sección de bienvenida -->
+        <div class="welcome-section" data-aos="fade-up">
+            <img src="imagenes/imagenindex.jpg" alt="Bienvenido">
+            <div class="welcome-text">
+                <h1>¡Bienvenidos!</h1>
+                <p>¡Bienvenidos a Sistemas en Pocos Minutos, una página de tecnología! Nos enfocamos en hacer que el mantenimiento preventivo del software sea comprensible para todos. Acompáñanos en este viaje para aprender a mantener tu tecnología en su mejor estado.</p>
+            </div>
+        </div>
+
+        <!-- Sección de importancia del mantenimiento preventivo -->
+        <div class="importance-section" data-aos="fade-up">
+            <h2>¿Por qué es importante el mantenimiento preventivo?</h2>
+            <div class="importance-container">
+                <div class="importance-item">
+                    <img src="imagenes/imagendeiniconprincipal2.png" alt="Mantenimiento Hardware">
+                    <div class="importance-text">
+                        <h3>Mantenimiento a nivel de Hardware</h3>
+                        <p>La limpieza regular y la verificación de componentes son esenciales para evitar fallos mecánicos y sobrecalentamiento, prolongando la vida útil de tu equipo.</p>
+                    </div>
+                </div>
+                <div class="importance-item">
+                    <img src="imagenes/imagendemantenimientosoftware.png" alt="Mantenimiento Software">
+                    <div class="importance-text">
+                        <h3>Mantenimiento a nivel de Software</h3>
+                        <p>En cuanto al software, es crucial eliminar archivos temporales, desfragmentar el disco y realizar análisis de virus para mantener el sistema operativo eficiente y protegido.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+        <div class="video-section">
+            <h2>Videos Que Podrían Interesarte</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/JOkIKjHfQp4?si=nkELz0wvy6rJddkx" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/IPfMK7JYkjw?si=fs209-NsgPP5axRj" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/tA6WB-xWu6c?si=XMrMlE2lBc0v_8Dd" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-description">
+                En estos videos se explica cómo realizar el mantenimiento de los computadores, tanto a nivel de software como de hardware. Estas guías te proporcionarán las herramientas necesarias para preservar el buen funcionamiento de tus dispositivos.
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Sistemas en Pocos Minutos. Todos los derechos reservados.</p>
+        <div class="contact-info">
+            <p>Contacto: proyectosenacolgesan@gmail.com</p>
+        </div>
+    </footer>
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init();
+
+        function toggleDropdown() {
+            document.getElementById("videoDropdown").classList.toggle("show");
+        }
+
+        // Cierra el menú si el usuario hace clic fuera de él
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown a')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

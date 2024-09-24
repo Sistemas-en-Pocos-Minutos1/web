@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informacion Institucional - Sistemas en Pocos Minutos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #555;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 10px;
+            position: relative; /* Necesario para el menú desplegable */
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            background: #666;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, opacity 0.3s, transform 0.3s;
+        }
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #777;
+            opacity: 0.8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #666;
+            min-width: 160px;
+            z-index: 1;
+            border-radius: 5px;
+            padding: 10px 0; /* Espaciado interno */
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 8px 61px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            transition: background-color 0.3s;
+        }
+        .dropdown-content a:hover {
+            background-color: #777;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block; /* Muestra el menú al pasar el ratón */
+        }
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+        .institution-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .institution-item {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            width: 90%;
+            max-width: 1000px;
+        }
+        .institution-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 20px;
+        }
+        .institution-logos img {
+            max-width: 170px;
+            height: auto;
+        }
+        /* Estilo específico para agrandar el logo de Santander */
+        .institution-logos img[alt="Logo Colegio General Santander"] {
+            max-width: 220px; /* Tamaño ajustado para el logo de Santander */
+        }
+        .institution-text {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .institution-text .santander-section,
+        .institution-text .sena-section {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .text-section {
+            width: 50%;
+            text-align: justify;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            width: 100%; /* Asegúrate de que el pie de página ocupe todo el ancho */
+            position: relative; /* Asegúrate de que se posicione correctamente */
+            left: 0; /* Alinea el pie de página a la izquierda */
+            padding-left: 400px; /* Aumenta el espacio a la izquierda */
+        }
+        .contact-info {
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Informacion Institucional - Sistemas en Pocos Minutos</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="partes.html">Partes del Computador</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+            <li><a href="https://sites.google.com/view/sistemas-en-pocos-minutos?usp=sharing">Página De Descargas</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0);">Videos</a>
+                <div class="dropdown-content">
+                    <a href="videos-mantenimieto de softwar.html">Mantenimiento de Software</a>
+                    <a href="mantenimineto-hardware.html">Vídeos - Mantenimiento de Hardware</a>
+                    <a href="videos-informativos.html">Videos Informativos sobre Sistemas</a>
+                    <a href="videos-descargas.html">Videos sobre Instalación de Programas</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h2>Informacion Institucional</h2>
+        <p>En esta sección encontrarás información sobre las instituciones con las que estamos asociados. Cada una de ellas juega un papel importante en el apoyo y desarrollo de nuestros proyectos.</p>
+        <div class="institution-list">
+            <div class="institution-item">
+                <div class="institution-logos">
+                    <img src="imagenes/logosantander.png" alt="Logo Colegio General Santander">
+                    <img src="imagenes/logosena.png" alt="Logo SENA">
+                </div>
+                <div class="institution-text">
+                    <div class="santander-section">
+                        <div class="text-section">
+                            <h4>Misión del Colegio General Santander</h4>
+                            <p>La Institución Educativa Colegio General Santander, es un establecimiento oficial que ofrece y garantiza el servicio social educativo en los niveles de preescolar, básica, media académica y técnica en articulación con el SENA a través de programas integrales de formación en competencias laborales, desarrollando los fines y fundamentos de la educación colombiana, formando ciudadanos para la vida en todas sus dimensiones y respetando los principios de diversidad y vulnerabilidad.</p>
+                        </div>
+                        <div class="text-section">
+                            <h4>Visión del Colegio General Santander</h4>
+                            <p>La Institución Educativa Colegio General Santander del Municipio de Villa del Rosario será reconocida en el año 2026 por ser líder en la prestación del servicio educativo con calidad en la zona de frontera, promoviendo a partir de procesos de Investigación como Estrategia Pedagógica apoyada en las TIC (IEP), valores de formación integral, respetando los principios de diversidad y vulnerabilidad, posibilitando el desarrollo de competencias laborales claves para la formación de personas con saberes humanistas y tecnológicos, capaces de mejorar su calidad de vida y la de su entorno social.</p>
+                        </div>
+                    </div>
+                    <div class="sena-section">
+                        <div class="text-section">
+                            <h4>Visión del SENA</h4>
+                            <p>Para el año 2026, el Servicio Nacional de Aprendizaje - SENA estará a la vanguardia de la cualificación del talento humano, tanto a nivel nacional como internacional. Esto se logrará a través de la formación profesional integral, el empleo, el emprendimiento y el reconocimiento de aprendizajes previos. Nuestro objetivo es generar valor público y fortalecer la economía campesina, popular, verde y digital, siempre con un enfoque diferencial orientado a la construcción del cambio, la transformación productiva, la soberanía alimentaria y la consolidación de una paz total, materializando así la autonomía territorial, y promoviendo la justicia social, ambiental y económica.</p>
+                        </div>
+                        <div class="text-section">
+                            <h4>Misión del SENA</h4>
+                            <p>El SENA está encargado de cumplir la función que le corresponde al Estado de invertir en el desarrollo social y técnico de los trabajadores colombianos, ofreciendo y ejecutando la formación profesional integral, para la incorporación y el desarrollo de las personas en actividades productivas que contribuyan al desarrollo social, económico y tecnológico del país (Ley 119/1994).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Sistemas en Pocos Minutos. Todos los derechos reservados.</p>
+        <div class="contact-info">
+            <p>Contacto: info@sistemaspocominutos.com</p>
+        </div>
+    </footer>
+</body>
+</html>
